@@ -1,8 +1,17 @@
 export const TodoList = (props) => {
-  const {todos, editTodo, editTodoText, onChangeEditTodoText, 
-        onClickCompleteEdit, changeIsCompleted, onClickEdit, 
-        onClickDelete, getTotalTodos, getCompletedCount, 
-        getIncompleteCount} = props;
+  const {
+    todos, 
+    editTodo, 
+    editTodoText, 
+    onChangeEditTodoText, 
+    onClickCompleteEdit, 
+    changeIsCompleted, 
+    onClickEdit, 
+    onClickDelete, 
+    totalTodos, 
+    completedCount, 
+    incompleteCount
+  } = props;
   return (
     <div className="todo-area">
       <p className="title">ToDo List</p>
@@ -29,7 +38,7 @@ export const TodoList = (props) => {
           );
         })}
       </ul>
-      <p className="title">全てのタスク：{getTotalTodos()} 完了済み：{getCompletedCount()} 未完了：{getIncompleteCount()}</p>
+      <p className="title">全てのタスク：{totalTodos} 完了済み：{completedCount} 未完了：{incompleteCount}</p>
     </div>
   );
 };
